@@ -89,7 +89,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface, TwoFact
     private ?PhoneNumber $phone = null;
 
     #[ORM\Column]
-    private bool $isVerified = false;
+    private bool $isVerified = true;
 
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $resetToken = null;
