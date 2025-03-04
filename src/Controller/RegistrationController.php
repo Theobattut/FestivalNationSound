@@ -42,15 +42,15 @@ class RegistrationController extends AbstractController
             $entityManager->flush();
 
             // generate a signed url and email it to the user
-            $this->emailVerifier->sendEmailConfirmation(
-                'app_verify_email',
-                $user,
-                (new TemplatedEmail())
-                    ->from(new Address('contact@sym-music.fr', 'Sym Music Email'))
-                    ->to((string) $user->getEmail())
-                    ->subject('Merci de confirmer votre email')
-                    ->htmlTemplate('registration/confirmation_email.html.twig')
-            );
+            // $this->emailVerifier->sendEmailConfirmation(
+            //     'app_verify_email',
+            //     $user,
+            //     (new TemplatedEmail())
+            //         ->from(new Address('contact@sym-music.fr', 'Sym Music Email'))
+            //         ->to((string) $user->getEmail())
+            //         ->subject('Merci de confirmer votre email')
+            //         ->htmlTemplate('registration/confirmation_email.html.twig')
+            // );
 
             // do anything else you need here, like send an email
 
